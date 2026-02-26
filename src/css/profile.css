@@ -1,0 +1,23 @@
+.profile-results .card{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--spacing-xl);
+}
+.profile-results .card img{
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: var(--spacing-md);
+}
+.profile-results .profile-info span{
+    display: block;
+    max-width: 400px;
+} 
+.profile-results .section-follow{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-xl);
+    font-size: var( --font-lg);
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+}
