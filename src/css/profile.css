@@ -1,6 +1,7 @@
 .profile-results .card{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
     gap: var(--spacing-xl);
 }
@@ -20,4 +21,37 @@
     font-size: var( --font-lg);
     justify-content: center;
     margin-top: var(--spacing-lg);
+}
+
+.container-repo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: var(--spacing-md);
+}
+.repo-card{
+    width: 100%;
+    height: 200px;
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: #000;
+    transition: transfom 2s ease;
+}
+.repo-card span{
+    background: #e5e5e5;
+    width: 100%;
+    text-align: start;
+    margin: 4px;
+    padding: 3px;
+    border-radius: 5px;
+}
+.titleRepo{
+    margin: 40px;
+}
+.repo-card:hover{
+    transform: scale(1.05);
 }
