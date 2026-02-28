@@ -6,11 +6,12 @@ const inputBtn = document.querySelector("#btn-search")
 const profileResults = document.querySelector(".profile-results")
 
 
-inputBtn.addEventListener('click', async () => {
+async function doSearch() {
     const userName = inputSearch.value
 
     if(!userName){
         alert("Digite o nome de um usuário!")
+        return
     }
 
     profileResults.innerHTML="Carregando..."
@@ -24,5 +25,12 @@ inputBtn.addEventListener('click', async () => {
         console.log("Ocorreu um erro ", error);
         profileResults.innerHTML=""
     }
+}
 
-})
+inputBtn.addEventListener('click', doSearch);
+
+inputSearch.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        doSearch()
+    }
+});
